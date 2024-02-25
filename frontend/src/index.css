@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+._title {
+    @apply text-5xl font-bold uppercase text-white mb-2
+}
+._link {
+    @apply text-lg uppercase font-semibold text-white hover:text-red-700
+}
+._button {
+    @apply py-3 px-5 border border-s-red-700 rounded-md text-red-700 text-xl
+    uppercase font-bold mr-5
+}
+
+._admin_title {
+    @apply text-2xl uppercase font-bold text-red-700
+    }
+._admin_paragraph {
+    @apply text-base text-white sm:mt-2
+}
+._admin_paragraph_in_user_id_card {
+    @apply text-xl text-white font-semibold pt-1
+}
+._admin_small_screen {
+    @apply w-[70%] flex sm:block justify-between items-center gap-4 p-3 my-2
+}
+
+body {
+    background: linear-gradient(to right, rgba(99, 98, 98, 0.472), rgba(196, 136, 136, 0.775));
+}
