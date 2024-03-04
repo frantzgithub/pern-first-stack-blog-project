@@ -38,3 +38,10 @@ export const isUserAdmin: RequestHandler = (req: any, res, next) => {
     return res.status(401).json({ msg: "not authorize as an admin" });
   }
 };
+export const isUserWriter: RequestHandler = (req: any, res, next) => {
+  if (req.user && req.user.isWriter) {
+    next();
+  } else {
+    return res.status(401).json({ msg: "not authorize as a writer" });
+  }
+};

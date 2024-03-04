@@ -18,4 +18,23 @@ model User {
   createdAt DateTime @default(now())
   isAdmin Boolean @default(false)
   isWriter Boolean @default(false)
+  posts Post[]
+}
+
+model Category {
+  id String @id @default(uuid())
+  category_name String @unique
+  posts Post[]
+}
+
+model Post {
+  id String @id @default(uuid())
+  title String?
+  desc String?
+  image String
+  category Category @relation(fields: [categoryId], references: [id])
+  categoryId String
+  author User @relation(fields: [authorId], references: [id])
+  authorId String
+  createdAT DateTime @default(now())
 }

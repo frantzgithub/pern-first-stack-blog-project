@@ -51,9 +51,9 @@ export const UsersCard = ({users}: DataUser) => {
         <p className="_admin_paragraph sm:ml-10">{users.isWriter ? <FaCheck /> : <MdClose /> }</p>
         </div>
         <div className="sm:w-[18%] _admin_small_screen ml-3">
-          <Link className="bg-blue-400 text-white py-1 px-2 mr-2 hover:bg-white hover:text-blue-700"
+          <Link className="_update_button"
            to={`/users/update/${users.id}`}>update</Link>
-           {!users.isAdmin && <span className="bg-red-700 text-white py-1 px-2 mr-2 hover:bg-white hover:text-red-700" onClick={() => handleDelete(users.id)}>delete</span>
+           {!users.isAdmin && <span className="_delete_button" onClick={() => handleDelete(users.id)}>delete</span>
            }
         </div>
       </li>

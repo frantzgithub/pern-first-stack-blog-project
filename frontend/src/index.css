@@ -28,6 +28,14 @@
     @apply w-[70%] flex sm:block justify-between items-center gap-4 p-3 my-2
 }
 
+._update_button {
+    @apply bg-blue-400 text-white py-1 px-2 mr-2 hover:bg-white hover:text-blue-700
+}
+
+._delete_button {
+    @apply bg-red-700 text-white py-1 px-2 mr-2 hover:bg-white hover:text-red-700
+}
+
 body {
     background: linear-gradient(to right, rgba(99, 98, 98, 0.472), rgba(196, 136, 136, 0.775));
 }

@@ -4,7 +4,7 @@ import { BaseUrl } from "../constant/constant";
 export const apiSlice = createApi({
     reducerPath: "authentticate",
     baseQuery: fetchBaseQuery({baseUrl: BaseUrl}),
-    tagTypes: ['User'],
+    tagTypes: ['User', 'Category', 'Blog'],
     endpoints: () => ({})
 })
 

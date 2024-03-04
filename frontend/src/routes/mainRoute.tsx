@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-import { Home, IsUserAdmin, Landing, Login, NotFound, Profile, Register, UpdateUserId, UserAuthorize, UsersList } from "../views"
+import { Home, IsUserAdmin, Landing, Login, NotFound, Profile, Register, UpdateUserId, UserAuthorize, UsersList, IsWriter, Form, CrudCategory, BlogId } from "../views"
 import { useAppSelector } from "../hook/hook"
 
 
@@ -13,6 +13,7 @@ export const MainRoute = () => {
           <Route path="/register" element={<Register />} />
           <Route element={<UserAuthorize />}>
             <Route path="/home" element={<Home />} />
+            <Route path="/blog/:id" element={<BlogId />} />
             <Route path="/profile" element={<Profile />} />
           </Route>
 
@@ -20,6 +21,12 @@ export const MainRoute = () => {
           <Route element={<IsUserAdmin />}>
             <Route path="users" element={<UsersList />} />
             <Route path="users/update/:id" element={<UpdateUserId />} />
+          </Route>
+
+          {/* writer routes */}
+          <Route element={<IsWriter />}>
+            <Route path="/create-blog" element={<Form />} />
+            <Route path="/category" element={<CrudCategory />} />
           </Route>
           
 

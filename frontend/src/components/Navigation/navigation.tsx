@@ -49,7 +49,7 @@ export const Navigation = () => {
                   <Link className="_link" to="/home">
                     home
                   </Link>
-                  <Link className="_link" to="/home">
+                  <Link className="_link" to="/create-blog">
                     Form
                   </Link>
                 </div>
@@ -70,7 +70,7 @@ export const Navigation = () => {
             <Link className="_link" to="/home">
               home
             </Link>
-            <Link className="_link" to="/home">
+            <Link className="_link" to="/create-blog">
               form
             </Link>
             {user && (

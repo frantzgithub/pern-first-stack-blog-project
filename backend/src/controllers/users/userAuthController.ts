@@ -46,7 +46,7 @@ export const loginUserController = async (res: Response, email: string, password
         const match = await bcrypt.compare(password, exist.password);
         if(match) {
             generateToken(res, exist.id);
-            res.status(200).json({id: exist.id, username: exist.username, email: exist.email, isAdmin: exist.isAdmin});
+            res.status(200).json({id: exist.id, username: exist.username, email: exist.email, isAdmin: exist.isAdmin, isWriter: exist.isWriter});
             return;
         }else{
             return res.status(400).json({msg: "token failed, please try again with the right credentials"});
